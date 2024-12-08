@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ if or (not .Params.hideDate) (not .Params.hideWords) }}
+<div class="flex mb-8 font-mono">
+    {{ if not .Params.hideDate }}<time class="divider">{{ .Date | dateFormat "2006-01-02" }}</time>{{end}}
+    {{ if not .Params.hideWords }}<span class="divider">{{ .WordCount }} words</span>{{end}}
+</div>
+{{ end }}
+<div class="break-words" id="content">{{ .Content }}</div>
+{{ end }}

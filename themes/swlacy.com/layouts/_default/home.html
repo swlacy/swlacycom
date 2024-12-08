@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="min-h-[85vh] flex-col flex justify-center">
+    <p class="text-4xl font-bold">{{ .Title }}</p>
+    <div class="text-lg">{{ .Content }}</div>
+    {{ if .Site.Menus.contact }}
+    <ul class="flex-col flex mt-1 space-y-2">
+        {{ range .Site.Menus.contact }}
+        <li>
+            <a class="w-fit flex space-x-2 font-mono" href="{{ .URL }}">
+                <span>{{ .Pre }}</span>
+                <span class="underline">{{ .Name }}</span>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,5 @@
+<figure>
+    <img src='{{ (printf "/%s" .Destination) | relURL | safeURL }}' alt="{{ .Text | htmlEscape }}"
+        class="w-full rounded-md">
+    <figcaption class="text-right text-sm italic opacity-50">{{ .Text }}</figcaption>
+</figure>

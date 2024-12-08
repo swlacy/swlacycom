@@ -1,0 +1,19 @@
+{{ if not .IsHome }}
+<header class="flex flex-col space-y-2">
+    <div class="flex justify-between items-center">
+        <a class="text-2xl font-bold" href="/">{{ site.Title }}</a>
+        {{ if .Site.Menus.contact }}
+        <div class="flex space-x-4">
+            {{ range .Site.Menus.contact }}
+            <a href="{{ .URL }}">{{ .Pre }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+    <div class="flex space-x-4">
+        {{ range .Site.Menus.header }}
+        <a class="underline font-mono" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+    </div>
+</header>
+{{ end }}

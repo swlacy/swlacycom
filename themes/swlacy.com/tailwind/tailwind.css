@@ -1,0 +1,120 @@
+@import "./github.css" screen and (prefers-color-scheme: light);
+@import "./github-dark.css" screen and (prefers-color-scheme: dark);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Global heading styling */
+h1 {
+    @apply text-4xl;
+    @apply font-bold;
+    @apply mb-4;
+}
+
+h2 {
+    @apply text-2xl;
+    @apply mb-4;
+}
+
+h3 {
+    @apply text-xl;
+    @apply mb-4;
+}
+
+/* Content heading numbering */
+#content {
+    counter-reset: section;
+}
+
+#content h2 {
+    counter-increment: section;
+    counter-reset: subsection;
+}
+
+#content h2::before {
+    content: counter(section) ". ";
+}
+
+#content h3 {
+    counter-increment: subsection;
+}
+
+#content h3::before {
+    content: counter(section) "." counter(subsection) ". ";
+}
+
+/* Text styling */
+p {
+    @apply mb-4;
+}
+
+p code {
+    @apply rounded-md;
+    @apply text-sm;
+    @apply text-light-accent;
+    @apply before:content-['`'];
+    @apply after:content-['`'];
+}
+
+p a,
+li a {
+    @apply underline;
+}
+
+a:hover {
+    @apply text-light-accent;
+    @apply dark:text-dark-accent;
+}
+
+/* List styling */
+#content ul,
+#content ol {
+    @apply mb-4;
+    @apply ms-8;
+}
+
+#content ul {
+    @apply list-disc;
+}
+
+#content ol {
+    @apply list-decimal;
+}
+
+/* Code styling */
+#content .highlight {
+    @apply overflow-x-auto;
+    @apply p-4;
+    @apply mb-4;
+    @apply rounded-md;
+    @apply text-sm;
+    @apply border-solid;
+    @apply border-2;
+    @apply border-light-text/50;
+    @apply dark:border-dark-text/50;
+}
+
+.chroma {
+    @apply bg-inherit;
+}
+
+.lntd {
+    @apply pr-2 !important;
+}
+
+.divider {
+    @apply after:content-['/'];
+    @apply after:mx-2;
+    @apply last:after:content-[''];
+}
+
+blockquote {
+    @apply ms-4;
+    @apply px-4;
+    @apply border-solid;
+    @apply border-l-4;
+    @apply border-light-text/50;
+    @apply dark:border-dark-text/50;
+}

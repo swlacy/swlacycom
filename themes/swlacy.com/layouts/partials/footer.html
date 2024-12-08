@@ -1,0 +1,10 @@
+{{ if not .IsHome }}
+<footer class="text-center text-sm">
+    <p>Test Footer</p>
+    {{ with .GitInfo }}
+    Last updated on {{ .AuthorDate | dateFormat "2006-01-02" }}
+    by {{ .AuthorName }}
+    (Commit: {{ .Hash | slice 0 7 }})
+    {{ end }}
+</footer>
+{{ end }}
