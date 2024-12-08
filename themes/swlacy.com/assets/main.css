@@ -1793,6 +1793,10 @@ video {
   color:rgb(59 59 59 / var(--tw-text-opacity, 1));
 }
 
+.text-light-text\/50 {
+  color:rgb(59 59 59 / 0.5);
+}
+
 .underline {
   text-decoration-line:underline;
 }
@@ -1983,6 +1987,10 @@ blockquote {
   .dark\:text-dark-text {
     --tw-text-opacity:1;
     color:rgb(255 255 255 / var(--tw-text-opacity, 1));
+  }
+
+  .dark\:text-dark-text\/50 {
+    color:rgb(255 255 255 / 0.5);
   }
 
   .hover\:dark\:text-dark-accent:hover {

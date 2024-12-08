@@ -25,7 +25,7 @@ case "$1" in
         tmux split-window -h -t "$SESSION_NAME"
 
         tmux send-keys -t "$SESSION_NAME:0.0" \
-            "hugo serve --bind=0.0.0.0 --noHTTPCache --gc --enableGitInfo --buildDrafts --printPathWarnings --printUnusedTemplates" C-m
+            "hugo serve --enableGitInfo --bind=0.0.0.0 --noHTTPCache --gc --enableGitInfo --buildDrafts --printPathWarnings --printUnusedTemplates" C-m
 
         tmux send-keys -t "$SESSION_NAME:0.1" \
             "cd $TAILWIND_PATH && tailwindcss --input $TAILWIND_INPUT --output $TAILWIND_OUTPUT --watch" C-m
@@ -35,7 +35,7 @@ case "$1" in
 
     deploy)
         echo "Hugo build..."
-        hugo --cleanDestinationDir --minify --gc --ignoreCache --printPathWarnings
+        hugo --enableGitInfo --cleanDestinationDir --minify --gc --ignoreCache --printPathWarnings
 
         if [ $? -ne 0 ]; then
             echo "Hugo build failed; exiting"
