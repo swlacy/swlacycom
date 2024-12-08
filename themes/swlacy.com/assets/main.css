@@ -1968,10 +1968,6 @@ blockquote {
 }
 
 @media (min-width: 640px) {
-  .sm\:text-justify {
-    text-align:justify;
-  }
-
   .sm\:text-base {
     font-size:1rem;
     line-height:1.5rem;
