@@ -51,12 +51,17 @@ case "$1" in
             exit 1
         fi
 
-        read -p "Commit message: " COMMIT_MESSAGE
-
-        echo "Pushing to GitHub..."
         git add -A
-        git commit -m "$COMMIT_MESSAGE"
-        git push
+
+        if [[ -n $(git diff --cached --name-only) ]]; then
+            echo "Pushing to GitHub..."
+            read -p "Commit message: " COMMIT_MESSAGE
+
+            git commit -m "$COMMIT_MESSAGE"
+            git push
+        else
+            echo "No staged files; skipping GitHub push"
+        fi
 
         echo "Deploying to Firebase..."
         firebase deploy
