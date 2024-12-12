@@ -1,0 +1,3 @@
+[submodule "swlacy.com-content"]
+	path = swlacy.com-content
+	url = https://github.com/swlacy/swlacy.com-content.git
