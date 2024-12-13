@@ -7,7 +7,7 @@ fi
 
 cd "$(dirname "$0")/.."
 
-TAILWIND_PATH="themes/swlacy.com/tailwind"
+TAILWIND_PATH="themes/swlacycom/tailwind"
 TAILWIND_INPUT="tailwind.css"
 TAILWIND_OUTPUT="../assets/main.css"
 

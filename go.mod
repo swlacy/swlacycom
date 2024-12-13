@@ -1,4 +1,4 @@
-module github.com/swlacy/swlacy.com
+module github.com/swlacy/swlacycom
 
 go 1.23.4
 

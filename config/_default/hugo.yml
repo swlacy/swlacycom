@@ -2,7 +2,7 @@ baseURL: https://swlacy.com
 languageCode: en-us
 title: Sid Lacy
 
-theme: swlacy.com
+theme: swlacycom
 
 menus:
     header:
