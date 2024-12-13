@@ -1,0 +1,8 @@
+module:
+    mounts:
+        - source: /Users/sid/Library/Mobile Documents/iCloud~md~obsidian/Documents/vault/swlacycom-content/content
+          target: content
+        - source: /Users/sid/Library/Mobile Documents/iCloud~md~obsidian/Documents/vault/swlacycom-content/static
+          target: static
+        - source: static
+          target: static
