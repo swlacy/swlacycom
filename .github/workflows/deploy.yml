@@ -8,7 +8,7 @@ on:
 
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -44,5 +44,7 @@ jobs:
       - name: Build Hugo site
         run: hugo --minify
 
-      - name: test output
-        run: ls -lAh public && cat public/now/index.html
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_SWLACY_COM }}"
