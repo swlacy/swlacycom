@@ -1,8 +1,8 @@
 module:
-    imports:
-        - path: github.com/swlacy/swlacycom-content
-          mounts:
-            - source: content
-              target: content
-            - source: static
-              target: static
+  imports:
+    - path: github.com/swlacy/swlacycom-content
+      mounts:
+        - source: content
+          target: content
+        - source: static
+          target: static
