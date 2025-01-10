@@ -3,4 +3,3 @@ public/
 resources/
 .hugo_build.lock
 themes/swlacycom/assets/main.css
-go.sum
