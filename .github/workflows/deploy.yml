@@ -45,4 +45,4 @@ jobs:
         run: hugo --minify
 
       - name: test output
-        run: ls -lAh public && cat now/index.html
+        run: ls -lAh public && cat public/now/index.html
