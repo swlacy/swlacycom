@@ -1,6 +1,6 @@
 {{ define "main" }}
-<div class="min-h-[85vh] flex-col flex justify-center">
-    <p class="text-4xl font-bold">{{ .Title }}</p>
+<div class="min-h-[85vh] flex-col flex max-w-2xl m-auto justify-center">
+    <p class="text-3xl font-bold">{{ .Title }}</p>
     <div class="text-lg">{{ .Content }}</div>
     {{ if .Site.Menus.contact }}
     <ul class="flex-col flex mt-1 space-y-2">

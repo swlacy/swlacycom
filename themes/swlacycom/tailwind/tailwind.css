@@ -15,16 +15,18 @@ h1 {
 
 h2 {
     @apply text-2xl;
+    @apply font-bold;
     @apply mb-4;
 }
 
 h3 {
-    @apply text-xl;
+    @apply text-lg;
+    @apply font-bold;
     @apply mb-4;
 }
 
 /* Content heading numbering */
-#content {
+/* #content {
     counter-reset: section;
 }
 
@@ -34,7 +36,7 @@ h3 {
 }
 
 #content h2::before {
-    content: counter(section) ". ";
+    content: counter(section) " ";
 }
 
 #content h3 {
@@ -42,8 +44,8 @@ h3 {
 }
 
 #content h3::before {
-    content: counter(section) "." counter(subsection) ". ";
-}
+    content: counter(section) "." counter(subsection) " ";
+} */
 
 /* Text styling */
 p {
@@ -51,7 +53,6 @@ p {
 }
 
 p code, li code {
-    @apply rounded-md;
     @apply text-sm;
     @apply before:content-['`'];
     @apply after:content-['`'];
@@ -106,14 +107,12 @@ hr {
     @apply mb-4;
     @apply rounded-md;
     @apply text-sm;
-    @apply border-solid;
-    @apply border-2;
-    @apply border-light-text/50;
-    @apply dark:border-dark-text/50;
+    @apply bg-light-callout;
+    @apply dark:bg-dark-callout;
 }
 
 .chroma {
-    @apply bg-inherit;
+    @apply bg-transparent;
 }
 
 .lntd {
